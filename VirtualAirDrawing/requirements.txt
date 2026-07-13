@@ -1,0 +1,10 @@
+opencv-python>=4.9.0
+mediapipe==0.10.21
+numpy>=1.26.0
+
+# NOTE: mediapipe 0.10.31+ (the current default `pip install mediapipe`)
+# removed/broke the legacy `mediapipe.solutions` API that this project
+# uses (mp.solutions.hands, mp.solutions.drawing_utils). Pinning to
+# 0.10.21 is required until the codebase is migrated to the newer
+# `mediapipe.tasks` HandLandmarker API. See:
+# https://github.com/google-ai-edge/mediapipe/issues/6200
